@@ -103,14 +103,7 @@ document.getElementById('previous').addEventListener('click', () => {
     masterPlay.classList.add('fa-pause-circle');
 })
 
-// document.getElementById('searchBar').addEventListener('click', () => {
-//     let searchValue = searchBar.value
-//     console.log("searchBar-------", searchValue)
-//     // let getSongFromList = songs.filter(item => item.songName.substring(0,3) === searchValue)
-//     // console.log("getSongFromList-------", getSongFromList)
 
-
-// })
 function search() {
     var input = document.getElementById('searchBar').value.toLowerCase();
     console.log("input----", input)
@@ -118,14 +111,13 @@ function search() {
     console.log("getSongFromList-------", getSongFromList)
 
     var searchResultsDiv = document.getElementById('searchResults');
-    searchResultsDiv.innerHTML = ''; // Clear previous results
+    searchResultsDiv.innerHTML = ''; 
 
     if (getSongFromList.length === 0) {
         searchResultsDiv.innerHTML = 'No results found';
         return;
     }
 
-    // Create and append elements to display search results
     var resultList = document.createElement('ul');
     getSongFromList.forEach(song => {
         var listItem = document.createElement('li');
